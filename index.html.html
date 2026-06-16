@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lost & Found</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css ">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-indigo-600 text-white p-4 sticky top-0">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+
+      <h1 class="text-2xl font-bold">LostLink</h1>
+
+      <ul class="hidden md:flex gap-6">
+
+  <li>
+    <a href="#home" class="hover:text-gray-200">
+      Home
+    </a>
+  </li>
+
+  <li>
+    <a href="#lost-items" class="hover:text-gray-200">
+      Lost Items
+    </a>
+  </li>
+
+  <li>
+    <a href="#features" class="hover:text-gray-200">
+      Features
+    </a>
+  </li>
+
+  <li>
+    <a href="#contact" class="hover:text-gray-200">
+      Contact
+    </a>
+  </li>
+
+</ul>
+
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-20">
+
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+      <i class="fa-solid fa-magnifying-glass text-6xl mb-6"></i>
+
+      <h2 class="text-4xl font-bold mb-4" id="lost-items">
+        Find What You Lost
+      </h2>
+
+      <p class="mb-6 text-lg">
+        Report and recover lost items easily.
+      </p>
+
+      <div class="flex justify-center gap-4 flex-wrap" >
+       <a href="report_lost.html"
+   class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold btn-hover inline-block">
+    Report Lost Item
+</a>
+
+        <button class="bg-indigo-800 px-6 py-3 rounded-lg hover:bg-indigo-900 transition">
+          Browse Items
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-16">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <h2 class="text-3xl font-bold text-center mb-10" id="features">
+        Features
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Feature 1 -->
+        <div class="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition">
+          <i class="fa-solid fa-file-circle-plus text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Easy Reporting</h3>
+          <p>Quickly report lost or found items.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition">
+          <i class="fa-solid fa-magnifying-glass text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Smart Search</h3>
+          <p>Find matching items faster.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition">
+          <i class="fa-solid fa-user-shield text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Secure Contact</h3>
+          <p>Connect safely with users.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Recent Listings -->
+  <section class="py-16 bg-white">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <h2 class="text-3xl font-bold text-center mb-10">
+        Recent Listings
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Card -->
+        <div class="bg-gray-100 rounded-xl shadow overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop"
+            class="h-56 w-full object-cover">
+
+          <div class="p-6">
+
+            <div class="flex justify-between mb-3">
+              <h3 class="text-xl font-semibold">iPhone 14</h3>
+
+              <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">
+                Lost
+              </span>
+            </div>
+
+            <p>📍 Library Block</p>
+            <p class="text-gray-500 text-sm mt-2">June 5, 2026</p>
+
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-gray-100 rounded-xl shadow overflow-hidden">
+
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop"
+            class="h-56 w-full object-cover">
+
+          <div class="p-6">
+
+            <div class="flex justify-between mb-3">
+              <h3 class="text-xl font-semibold">Nike Shoes</h3>
+
+              <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">
+                Found
+              </span>
+            </div>
+
+            <p>📍 Sports Ground</p>
+            <p class="text-gray-500 text-sm mt-2">June 4, 2026</p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 mt-10">
+
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+      <h2 class="text-2xl font-bold mb-4" id="contact">LostLink</h2>
+
+      <div class="flex justify-center gap-6 text-2xl mb-4">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+
+      <p class="text-gray-400">
+        © 2026 LostLink. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

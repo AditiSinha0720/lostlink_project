@@ -1,0 +1,40 @@
+/* General */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+nav {
+    z-index: 1000;
+}
+
+/* Report Page */
+.drop-zone {
+    border: 2px dashed #6366f1;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    background-color: #f8fafc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.drop-zone.dragover {
+    background-color: #e0e7ff;
+}
+
+#preview {
+    max-width: 250px;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+/* Buttons */
+.btn-hover:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
