@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reports</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100">
+
+<header>
+    <h1 class="text-center text-3xl font-bold text-indigo-600 mt-8">
+        LostLink
+    </h1>
+</header>
+
+<main>
+
+<div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-xl shadow">
+        <h1 class="text-3xl font-bold text-center text-indigo-600 mb-8">
+            My Reports
+        </h1>
+
+        <div id="reportsContainer">
+        </div>
+    </div>
+
+    <script>
+
+        let reports = JSON.parse(
+            localStorage.getItem("reports")
+        ) || [];
+
+        let container = document.getElementById("reportsContainer");
+
+        if (reports.length == 0) {
+
+            container.innerHTML = "<p class='text-center text-gray-500'>No Reports Found</p>";
+        }
+       else {
+
+            reports.forEach(function (report) {
+
+                container.innerHTML += `
+
+                <div class="bg-white p-6 rounded-xl shadow mb-4">
+
+                    <h2 class="text-xl font-bold">
+                        ${report.itemName}
+                    </h2>
+                    <p class="mt-2">
+                        ${report.description}
+                    </p>
+                    <p class="mt-2 text-indigo-600">
+                        📍 ${report.location}
+                    </p>
+                </div>
+                `;
+            });
+        }
+    </script>
+    </div>
+
+</main>
+
+<footer class="text-center text-gray-500 py-5">
+    © 2026 LostLink
+</footer>
+</body>
+</html>

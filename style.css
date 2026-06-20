@@ -38,3 +38,11 @@ nav {
     transform: scale(1.05);
     transition: 0.3s;
 }
+
+.report-card{
+padding:20px;
+border-radius:12px;
+background:white;
+margin-bottom:20px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}

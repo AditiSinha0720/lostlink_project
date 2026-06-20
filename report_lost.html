@@ -12,6 +12,13 @@
 </head>
 
 <body class="bg-gray-100">
+<header>
+    <h1 class="text-center text-3xl font-bold text-indigo-600 mt-8">
+        LostLink
+    </h1>
+</header>
+
+<main>
 
 <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-xl shadow">
 
@@ -106,12 +113,14 @@
 
     <!-- Save Button -->
     <button
-        onclick="saveReport()"
-        class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">
-
-        Submit Report
-
-    </button>
+    onclick="saveReport()"
+    class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">
+    Submit Report
+</button>
+<a href="my_reports.html"
+class="bg-green-600 text-white px-6 py-3 rounded-lg ml-3">
+View Reports
+</a>
 
 </div>
 
@@ -155,16 +164,37 @@ function saveReport() {
     const location =
         document.getElementById("location").value;
 
-    const report = {
-        itemName,
-        description,
-        location
-    };
+     if(itemName==""){
+    alert("Please enter item name");
+    return;
+}
 
-    localStorage.setItem(
-        "lostItemReport",
-        JSON.stringify(report)
-    );
+
+if(description==""){
+    alert("Please enter description");
+    return;
+}
+
+
+if(location==""){
+    alert("Please enter location");
+    return;
+}
+
+let reports = JSON.parse(
+localStorage.getItem("reports")
+) || [];
+
+reports.push({
+itemName,
+description,
+location
+});
+
+localStorage.setItem(
+"reports",
+JSON.stringify(reports)
+);
 
     alert("Report Saved Successfully!");
 
@@ -305,5 +335,10 @@ function voiceInput() {
 }
 
 </script>
+</div>
+</main>
+<footer class="text-center text-gray-500 py-5">
+    © 2026 LostLink
+</footer>
 </body>
 </html>
