@@ -44,6 +44,9 @@
             class="w-full border p-2 rounded mt-1"
             rows="4"
             placeholder="Describe your lost item"></textarea>
+            <p id="charCount" class="text-sm text-gray-500 mt-1">
+    0 characters
+</p>
     </div>
 
     <!-- Location -->
@@ -113,9 +116,14 @@
 
     <!-- Save Button -->
     <button
-    onclick="saveReport()"
-    class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">
-    Submit Report
+
+id="submitBtn"
+onclick="saveReport()"
+
+class="bg-indigo-600 text-white px-6 py-3 rounded-lg">
+
+Submit Report
+
 </button>
 <a href="my_reports.html"
 class="bg-green-600 text-white px-6 py-3 rounded-lg ml-3">
@@ -333,6 +341,70 @@ function voiceInput() {
             event.results[0][0].transcript;
     };
 }
+
+
+
+
+const descriptionBox =
+document.getElementById("description");
+
+const charCount =
+document.getElementById("charCount");
+
+descriptionBox.addEventListener("input", function(){
+
+    charCount.textContent =
+    descriptionBox.value.length +
+    " characters";
+
+});
+
+
+window.addEventListener("load", function() {
+
+    alert("Welcome to LostLink! Please fill out the form to report your lost item.");
+
+});
+
+
+const fields =
+document.querySelectorAll("input, textarea");
+
+
+fields.forEach(function(field){
+
+    field.addEventListener(
+
+        "focus",
+
+        function(){
+
+            this.style.border =
+            "5px solid yellow";
+
+        }
+
+    );
+
+});
+
+
+const submitBtn = document.getElementById("submitBtn");
+submitBtn.addEventListener(
+    "mouseover",
+    function(){
+        submitBtn.style.backgroundColor =
+        "green";
+    }
+);
+
+
+submitBtn.addEventListener(
+    "mouseout",
+    function(){
+        submitBtn.style.backgroundColor ="#4f46e5";
+    }
+);
 
 </script>
 </div>
